@@ -1,34 +1,27 @@
-# laravel6-frontend-boilerplate
+# Laravel 6 (LTS) Vue.js Frontend Boilerplate
 
-## Project setup
-```
-npm install
-```
+> A Vue.js Frontend starter project kit template/boilerplate with Laravel 6 Backend API support.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+<p align="center">
+<img src="https://i.imgur.com/O9aVaJn.png">
+</p>
 
-### Compiles and minifies for production
-```
-npm run build
-```
+<p align="center">
+<img src="https://i.imgur.com/Xtu832N.png">
+</p>
 
-### Run your tests
-```
-npm run test
-```
+## Features
+- Backend API Laravel 6 (Long-term support/LTS) https://github.com/cleancode-id/laravel6-api-boilerplate
+- Optimized for Frontend (basic UI/views, minimum dependencies)
+- Authentication with JWT
+- Basic Features: Register, Login, Forgot Password, Update Profile & Password
+- Latest Vue.js with support Vue CLI 3, vuex, vue-router, vue-meta, vue-i18n, etc.
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Installation
+TBD.
 
-### Run your unit tests
-```
-npm run test:unit
-```
+## Usage
+TBD.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Credits
+- Inspired from https://github.com/cretueusebiu/laravel-vue-spa
