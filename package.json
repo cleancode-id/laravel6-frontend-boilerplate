@@ -9,10 +9,20 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
     "core-js": "^2.6.5",
+    "jquery": "^3.4.1",
+    "js-cookie": "^2.2.1",
+    "popper.js": "^1.15.0",
+    "sweetalert2": "^8.17.1",
+    "vform": "^1.0.1",
     "vue": "^2.6.10",
+    "vue-i18n": "^8.14.0",
+    "vue-meta": "^2.2.2",
     "vue-router": "^3.0.3",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",

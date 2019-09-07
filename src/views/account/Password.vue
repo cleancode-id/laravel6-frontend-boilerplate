@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>This is an about page.</p>
+    <p>This is a change password page.</p>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
   },
 
   metaInfo () {
-    return { title: this.$t('about') }
+    return { title: this.$t('password') }
   }
 }
 </script>

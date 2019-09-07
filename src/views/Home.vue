@@ -1,18 +1,22 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="row">
+    <div class="col text-center">
+      <img alt="Vue logo" src="../assets/logo.png">
+
+      <h4 class="mt-5">A Vue.js Frontend Starter Kit / Boilerplate</h4>
+      <p>Laravel 6 Backend API Ready</p>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'home',
   components: {
-    HelloWorld
+    //
+  },
+
+  metaInfo () {
+    return { title: this.$t('home') }
   }
 }
 </script>
