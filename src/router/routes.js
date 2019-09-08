@@ -14,5 +14,6 @@ export default [
       { path: 'profile', name: 'account.profile', component: page('account/Profile.vue') },
       { path: 'password', name: 'account.password', component: page('account/Password.vue') }
     ]
-  }
+  },
+  { path: '*', component: page('errors/404.vue') }
 ]

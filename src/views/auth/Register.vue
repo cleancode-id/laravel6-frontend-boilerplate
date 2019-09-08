@@ -58,6 +58,8 @@ import { Form, HasError } from 'vform'
 import Card from '@/components/Card'
 
 export default {
+  middleware: 'guest',
+
   components: {
     Card,
     HasError
