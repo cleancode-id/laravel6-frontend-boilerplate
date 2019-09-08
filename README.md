@@ -1,6 +1,7 @@
 # Laravel 6 (LTS) Vue.js Frontend Boilerplate
 
 [![Build Status](https://travis-ci.org/cleancode-id/laravel6-frontend-boilerplate.svg?branch=master)](https://travis-ci.org/cleancode-id/laravel6-frontend-boilerplate)
+[![GitHub version](https://badge.fury.io/gh/cleancode-id%2Flaravel6-frontend-boilerplate.svg)](https://badge.fury.io/gh/cleancode-id%2Flaravel6-frontend-boilerplate)
 
 > A Vue.js Frontend starter project kit template/boilerplate with Laravel 6 Backend API support.
 
@@ -18,7 +19,7 @@
 - Authentication with JWT
 - Basic Features: Register, Login, Forgot Password, Update Profile & Password
 - Latest Vue.js with support Vue CLI 3, vuex, vue-router, vue-meta, vue-i18n, etc.
-- Unit & Feature Test (To Do)
+- Unit & Feature Test
 - Standard Coding Style & Clean Code
  
 ## Installation
