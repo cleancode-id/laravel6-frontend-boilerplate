@@ -1,5 +1,7 @@
 # Laravel 6 (LTS) Vue.js Frontend Boilerplate
 
+[![Build Status](https://travis-ci.org/cleancode-id/laravel6-frontend-boilerplate.svg?branch=master)](https://travis-ci.org/cleancode-id/laravel6-frontend-boilerplate)
+
 > A Vue.js Frontend starter project kit template/boilerplate with Laravel 6 Backend API support.
 
 <p align="center">
