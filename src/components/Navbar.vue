@@ -32,7 +32,7 @@
           </li>
           <li v-if="user" class="nav-item">
             <router-link :to="{ name: 'account.profile' }" class="nav-link" active-class="active">
-              {{ $t('account') }}
+              {{ user.name }}
             </router-link>
           </li>
           <li v-if="user" class="nav-item">
