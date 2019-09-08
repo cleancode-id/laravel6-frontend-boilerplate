@@ -22,12 +22,12 @@
 <!--          </li>-->
         </ul>
         <ul class="navbar-nav ml-auto">
-          <li v-if="!user" class="nav-item">
+          <li v-if="!user" class="nav-item nav-item-register">
             <router-link :to="{ name: 'register' }" class="nav-link" active-class="active">
               {{ $t('register') }}
             </router-link>
           </li>
-          <li v-if="!user" class="nav-item">
+          <li v-if="!user" class="nav-item nav-item-login">
             <router-link :to="{ name: 'login' }" class="nav-link" active-class="active">
               {{ $t('login') }}
             </router-link>
