@@ -9,6 +9,7 @@ describe('Navbar.vue', () => {
         $t: key => key
       },
       computed: {
+        appName: () => 'Test',
         user: () => null
       }
     })
@@ -23,6 +24,7 @@ describe('Navbar.vue', () => {
         $t: key => key
       },
       computed: {
+        appName: () => 'Test',
         user: () => {
           return {
             id: 1

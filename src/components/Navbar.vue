@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <router-link :to="{ name: 'home' }" class="navbar-brand" exact>
-        Application
+        {{ appName }}
       </router-link>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -53,6 +53,7 @@ import { mapGetters } from 'vuex'
 
 export default {
   computed: mapGetters({
+    appName: 'config/appName',
     user: 'auth/user'
   }),
 

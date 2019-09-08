@@ -10,6 +10,7 @@
 
 <script>
 import Loading from '@/components/Loading'
+import { APP_NAME } from '@/config'
 
 // Load layout components dynamically.
 const requireContext = require.context('@/layouts', false, /.*\.vue$/)
@@ -31,11 +32,9 @@ export default {
   },
 
   metaInfo () {
-    const { appName } = { appName: 'Application' }
-
     return {
-      title: appName,
-      titleTemplate: `%s · ${appName}`
+      title: APP_NAME,
+      titleTemplate: `%s · ${APP_NAME}`
     }
   },
 
