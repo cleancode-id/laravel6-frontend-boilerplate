@@ -14,7 +14,7 @@
 </p>
 
 ## Features
-- Backend API Laravel 6 (Long-term support/LTS) https://github.com/cleancode-id/laravel6-api-boilerplate
+- Ready using Backend API Laravel 6 (Long-term support/LTS) https://github.com/cleancode-id/laravel6-api-boilerplate
 - Optimized for Frontend (basic UI/views, minimum dependencies, no bloatware)
 - Authentication with JWT
 - Basic Features: Register, Login, Forgot Password, Update Profile & Password
@@ -23,7 +23,7 @@
 - Standard Coding Style & Clean Code
  
 ## Installation
-- Clone this repository.
+- Download [latest release](https://github.com/cleancode-id/laravel6-frontend-boilerplate/releases) or clone this repository.
 - Edit `vue.config.js` and set API backend dev-server if necessary
 - Run `npm install`
 
