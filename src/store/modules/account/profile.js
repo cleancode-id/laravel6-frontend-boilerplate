@@ -1,22 +1,22 @@
 // import * as types from '@/store/mutation-types'
 
 // state
-export const state = {
+const state = {
   //
 }
 
 // getters
-export const getters = {
+const getters = {
   //
 }
 
 // mutations
-export const mutations = {
+const mutations = {
   //
 }
 
 // actions
-export const actions = {
+const actions = {
   update ({ dispatch, commit }, { form }) {
     return new Promise(async (resolve, reject) => {
       try {
@@ -29,4 +29,12 @@ export const actions = {
       }
     })
   }
+}
+
+export default {
+  namespaced: true,
+  state,
+  mutations,
+  actions,
+  getters
 }

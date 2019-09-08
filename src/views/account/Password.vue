@@ -36,6 +36,7 @@
 <script>
 import { Form, HasError, AlertSuccess } from 'vform'
 import Card from '@/components/Card'
+import AccountModule from '@/store/modules/account/password'
 
 export default {
   components: {
@@ -55,6 +56,14 @@ export default {
         password_confirmation: ''
       })
     }
+  },
+
+  created () {
+    this.$store.registerModule('account-password', AccountModule)
+  },
+
+  beforeDestroy () {
+    this.$store.unregisterModule('account-password')
   },
 
   methods: {
