@@ -1,7 +1,9 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">Application</a>
+      <router-link :to="{ name: 'home' }" class="navbar-brand" exact>
+        Application
+      </router-link>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -9,7 +11,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <router-link :to="{ name: 'home' }" class="nav-link" active-class="active">
+            <router-link :to="{ name: 'home' }" class="nav-link" active-class="active" exact>
               {{ $t('home') }}
             </router-link>
           </li>
