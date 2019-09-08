@@ -5,36 +5,36 @@
         <form @submit.prevent="register" @keydown="form.onKeydown($event)">
           <!-- Name -->
           <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
+            <label for="name" class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
             <div class="col-md-7">
-              <input v-model="form.name" :class="{ 'is-invalid': form.errors.has('name') }" class="form-control" type="text" name="name">
+              <input v-model="form.name" id="name" :class="{ 'is-invalid': form.errors.has('name') }" class="form-control" type="text" name="name">
               <has-error :form="form" field="name" />
             </div>
           </div>
 
           <!-- Email -->
           <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
+            <label for="email" class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
             <div class="col-md-7">
-              <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
+              <input v-model="form.email" id="email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
               <has-error :form="form" field="email" />
             </div>
           </div>
 
           <!-- Password -->
           <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('password') }}</label>
+            <label for="password" class="col-md-3 col-form-label text-md-right">{{ $t('password') }}</label>
             <div class="col-md-7">
-              <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password">
+              <input v-model="form.password" id="password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password">
               <has-error :form="form" field="password" />
             </div>
           </div>
 
           <!-- Password Confirmation -->
           <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('confirm_password') }}</label>
+            <label for="password_confirmation" class="col-md-3 col-form-label text-md-right">{{ $t('confirm_password') }}</label>
             <div class="col-md-7">
-              <input v-model="form.password_confirmation" :class="{ 'is-invalid': form.errors.has('password_confirmation') }" class="form-control" type="password" name="password_confirmation">
+              <input v-model="form.password_confirmation" id="password_confirmation" :class="{ 'is-invalid': form.errors.has('password_confirmation') }" class="form-control" type="password" name="password_confirmation">
               <has-error :form="form" field="password_confirmation" />
             </div>
           </div>
@@ -42,7 +42,7 @@
           <div class="form-group row">
             <div class="col-md-7 offset-md-3 d-flex">
               <!-- Submit Button -->
-              <button type="submit" class="btn btn-primary">
+              <button type="submit" class="btn btn-primary" :disabled="form.busy">
                 {{ $t('register') }}
               </button>
             </div>
@@ -86,7 +86,7 @@ export default {
 
         // Redirect home.
         this.$router.push({ name: 'home' })
-      } catch (e) { }
+      } catch (e) {}
     }
   }
 }

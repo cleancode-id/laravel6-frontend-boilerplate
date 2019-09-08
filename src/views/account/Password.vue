@@ -5,7 +5,7 @@
 
       <!-- Password -->
       <div class="form-group row">
-        <label class="col-md-3 col-form-label text-md-right">{{ $t('new_password') }}</label>
+        <label for="password" class="col-md-3 col-form-label text-md-right">{{ $t('new_password') }}</label>
         <div class="col-md-7">
           <input v-model="form.password" id="password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password">
           <has-error :form="form" field="password" />
@@ -14,7 +14,7 @@
 
       <!-- Password Confirmation -->
       <div class="form-group row">
-        <label class="col-md-3 col-form-label text-md-right">{{ $t('confirm_password') }}</label>
+        <label for="password_confirmation" class="col-md-3 col-form-label text-md-right">{{ $t('confirm_password') }}</label>
         <div class="col-md-7">
           <input v-model="form.password_confirmation" id="password_confirmation" :class="{ 'is-invalid': form.errors.has('password_confirmation') }" class="form-control" type="password" name="password_confirmation">
           <has-error :form="form" field="password_confirmation" />

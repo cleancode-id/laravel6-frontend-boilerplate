@@ -5,7 +5,7 @@
 
       <!-- Name -->
       <div class="form-group row">
-        <label class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
+        <label for="name" class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
         <div class="col-md-7">
           <input v-model="form.name" id="name" :class="{ 'is-invalid': form.errors.has('name') }" class="form-control" type="text" name="name">
           <has-error :form="form" field="name" />
@@ -14,7 +14,7 @@
 
       <!-- Email -->
       <div class="form-group row">
-        <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
+        <label for="email" class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
         <div class="col-md-7">
           <input v-model="form.email" id="email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
           <has-error :form="form" field="email" />
