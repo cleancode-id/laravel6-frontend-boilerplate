@@ -96,21 +96,11 @@ export const actions = {
     })
   },
 
-  updateUser ({ commit }, payload) {
-    commit(types.UPDATE_USER, payload)
-  },
-
   async logout ({ commit }) {
     try {
       // await axios.post('/api/logout')
     } catch (e) { }
 
     commit(types.LOGOUT)
-  },
-
-  async fetchOauthUrl (ctx, { provider }) {
-    const { data } = await axios.post(`/api/oauth/${provider}`)
-
-    return data.url
   }
 }
