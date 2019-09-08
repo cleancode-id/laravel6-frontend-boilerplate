@@ -62,13 +62,11 @@ export default {
 
   methods: {
     async login () {
-      try {
-        // Submit the form.
-        await this.$store.dispatch('auth/login', { form: this.form })
+      // Submit the form.
+      await this.$store.dispatch('auth/login', { form: this.form })
 
-        // Redirect home.
-        this.$router.push({ name: 'home' })
-      } catch (e) {}
+      // Redirect home.
+      this.$router.push({ name: 'home' })
     }
   }
 }

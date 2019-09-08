@@ -37,7 +37,6 @@
 import { Form, HasError, AlertSuccess } from 'vform'
 import Card from '@/components/Card'
 import { mapGetters } from 'vuex'
-import AccountModule from '@/store/modules/account/profile'
 
 export default {
   components: {
@@ -64,23 +63,17 @@ export default {
   }),
 
   created () {
-    this.$store.registerModule('account-profile', AccountModule)
-
     // Fill the form with user data.
     this.form.keys().forEach(key => {
       this.form[key] = this.user[key]
     })
   },
 
-  beforeDestroy () {
-    this.$store.unregisterModule('account-profile')
-  },
-
   methods: {
     async update () {
-      try {
-        await this.$store.dispatch('account-profile/update', { form: this.form })
-      } catch (e) {}
+      const { data: { data } } = await this.form.patch('/api/account/profile')
+
+      this.$store.dispatch('auth/updateUser', { user: data })
     }
   }
 }

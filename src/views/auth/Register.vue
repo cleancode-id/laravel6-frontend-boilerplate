@@ -82,13 +82,11 @@ export default {
 
   methods: {
     async register () {
-      try {
-        // Submit the form.
-        await this.$store.dispatch('auth/register', { form: this.form })
+      // Submit the form.
+      await this.$store.dispatch('auth/register', { form: this.form })
 
-        // Redirect home.
-        this.$router.push({ name: 'home' })
-      } catch (e) {}
+      // Redirect home.
+      this.$router.push({ name: 'home' })
     }
   }
 }

@@ -51,49 +51,35 @@ export const actions = {
     commit(types.SAVE_TOKEN, payload)
   },
 
-  register ({ dispatch, commit }, { form }) {
-    return new Promise(async (resolve, reject) => {
-      try {
-        await form.post('/api/auth/register')
+  async register ({ dispatch, commit }, { form }) {
+    await form.post('/api/auth/register')
 
-        await dispatch('login', { form: form })
-        resolve()
-      } catch (e) {
-        reject(e)
-      }
-    })
+    await dispatch('login', { form: form })
   },
 
-  login ({ dispatch, commit }, { form }) {
-    return new Promise(async (resolve, reject) => {
-      try {
-        const { data } = await form.post('/api/auth/login')
+  async login ({ dispatch, commit }, { form }) {
+    const { data } = await form.post('/api/auth/login')
 
-        dispatch('saveToken', {
-          token: data.token,
-          remember: this.remember
-        })
-
-        await dispatch('fetchUser')
-        resolve()
-      } catch (e) {
-        reject(e)
-      }
+    await dispatch('saveToken', {
+      token: data.token,
+      remember: this.remember
     })
+
+    await dispatch('fetchUser')
+  },
+
+  updateUser ({ commit }, payload) {
+    commit(types.UPDATE_USER, payload)
   },
 
   async fetchUser ({ commit }) {
-    return new Promise(async (resolve, reject) => {
-      try {
-        const { data } = await axios.get('/api/auth/me')
+    try {
+      const { data } = await axios.get('/api/auth/me')
 
-        commit(types.FETCH_USER_SUCCESS, { user: data.data })
-        resolve()
-      } catch (e) {
-        commit(types.FETCH_USER_FAILURE)
-        reject(e)
-      }
-    })
+      commit(types.FETCH_USER_SUCCESS, { user: data.data })
+    } catch (e) {
+      commit(types.FETCH_USER_FAILURE)
+    }
   },
 
   async logout ({ commit }) {
